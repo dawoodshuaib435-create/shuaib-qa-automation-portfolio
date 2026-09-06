@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Shuaib QA API Portfolio",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET user list",
+      "request": {
+        "method": "GET",
+        "url": "https://reqres.in/api/users?page=2"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 200',()=>pm.response.to.have.status(200));",
+              "pm.test('Data array exists',()=>pm.expect(pm.response.json().data).to.be.an('array'));"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "POST create user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\\n  \\\"name\\\": \\\"Shuaib\\\",\\n  \\\"job\\\": \\\"QA Tester\\\"\\n}"
+        },
+        "url": "https://reqres.in/api/users"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test('Status 201',()=>pm.response.to.have.status(201));",
+              "pm.test('Name returned',()=>pm.expect(pm.response.json().name).to.eql('Shuaib'));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
