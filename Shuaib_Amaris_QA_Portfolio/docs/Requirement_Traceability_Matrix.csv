@@ -1,7 +1,0 @@
-Requirement ID,Requirement,Manual Test,Automated Test,Coverage
-REQ-001,Valid users can log in,TC-001,playwright/tests/login.spec.js,Automated
-REQ-002,Invalid credentials are rejected,TC-002,playwright/tests/login.spec.js,Automated
-REQ-003,Locked users are blocked,TC-003,playwright/tests/login.spec.js,Automated
-REQ-004,Users can add items to cart,TC-004,playwright/tests/cart.spec.js,Automated
-REQ-005,Users can remove items from cart,TC-005,playwright/tests/cart.spec.js,Automated
-REQ-006,Required-field validation is shown,TC-006,,Manual

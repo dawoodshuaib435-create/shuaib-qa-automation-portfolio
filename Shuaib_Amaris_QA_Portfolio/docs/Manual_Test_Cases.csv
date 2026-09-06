@@ -1,7 +1,0 @@
-Test ID,Area,Scenario,Priority,Expected Result
-TC-001,Login,Valid login,P1,Inventory page opens
-TC-002,Login,Invalid password,P1,Authentication error appears
-TC-003,Login,Locked user,P1,Locked-out error appears
-TC-004,Cart,Add one product,P1,Cart count becomes 1
-TC-005,Cart,Remove product,P1,Item disappears and badge updates
-TC-006,Login,Blank credentials,P2,Required-field error appears
